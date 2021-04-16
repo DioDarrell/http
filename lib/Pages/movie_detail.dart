@@ -21,7 +21,9 @@ class MovieDetail extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text(movie.title),
+        title: Text(movie.title, style: TextStyle(color: Colors.black)),
+        backgroundColor: Colors.yellow,
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Center(

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:js9/pages/movie_detail.dart';
 import 'package:js9/Service/http_service.dart';
@@ -33,7 +35,8 @@ class _MovieListState extends State<MovieList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Popular Movies"),
+        title: Text("Popular Movies", style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.yellow,
       ),
       body: ListView.builder(
         itemCount: (this.moviesCount == null) ? 0 : this.moviesCount,
@@ -69,35 +72,35 @@ class _MovieListState extends State<MovieList> {
                       child: Text(
                         movies[position].title,
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
+                            fontWeight: FontWeight.bold, fontSize: 18, color: Colors.yellow),
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 120, top: 60),
                       child: Text(
                         "Release Date",
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 10, color: Colors.yellow),
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 120, top: 70),
                       child: Text(
                         movies[position].releaseDate.toString(),
-                        style: TextStyle(fontSize: 19),
+                        style: TextStyle(fontSize: 19, color: Colors.yellow),
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 120, top: 110),
                       child: Text(
                         "Rate",
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 10, color: Colors.yellow),
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 120, top: 120),
                       child: Text(
                         movies[position].voteAverage.toString(),
-                        style: TextStyle(fontSize: 19),
+                        style: TextStyle(fontSize: 19, color: Colors.yellow),
                       ),
                     ),
                   ],
